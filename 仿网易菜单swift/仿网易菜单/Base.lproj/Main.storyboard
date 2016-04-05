@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IeZ-dr-OXG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="仿网易菜单" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq0-1w-3vY" userLabel="标题">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mLQ-Vs-p9y"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hcR-Uh-OZX" userLabel="内容">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sq0-1w-3vY" secondAttribute="trailing" id="GHo-dX-VAT"/>
+                            <constraint firstAttribute="trailing" secondItem="hcR-Uh-OZX" secondAttribute="trailing" id="JCR-ew-Lrc"/>
+                            <constraint firstItem="hcR-Uh-OZX" firstAttribute="top" secondItem="Sq0-1w-3vY" secondAttribute="bottom" id="L9g-u3-uez"/>
+                            <constraint firstItem="Sq0-1w-3vY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y6B-Jy-Hu4"/>
+                            <constraint firstItem="hcR-Uh-OZX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b38-eu-Gb4"/>
+                            <constraint firstItem="Sq0-1w-3vY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gas-nU-eF9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hcR-Uh-OZX" secondAttribute="bottom" id="n5n-sO-rFl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z8u-oX-jq1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="contentScrollView" destination="hcR-Uh-OZX" id="Fp2-R8-YPH"/>
+                        <outlet property="titleScrollView" destination="Sq0-1w-3vY" id="W9G-Wf-aup"/>
+                        <outlet property="titleTopConstraint" destination="gas-nU-eF9" id="HuN-yv-gOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H0y-fE-zzZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IeZ-dr-OXG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iNY-zH-Ghw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PFW-3c-UqW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5c-C2-wQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="78"/>
+        </scene>
+    </scenes>
+</document>
